@@ -14,6 +14,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.rememberScrollState
+import androidx.compose.material3.Checkbox
 import androidx.compose.material3.Divider
 import androidx.compose.material3.RadioButton
 import androidx.compose.material3.Scaffold
@@ -126,6 +127,7 @@ fun RadioButtonExample(modifier: Modifier = Modifier) {
                                sel=text
                             }
                         )
+                        Checkbox(checked = (text == sel), onCheckedChange = { sel=text})
                         Text( text = text, fontSize = 24.sp )
                     }
                 }
